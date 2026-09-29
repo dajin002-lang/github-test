@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>ATNR Thailand｜Website Review</title>
+<style>
+:root{
+  --red:#E61E25;--ink:#111922;--muted:#65717C;--line:#DCE3E8;--soft:#F4F7F9;--dark:#0C1720;--dark2:#17232D;--white:#fff;--max:1320px
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,"Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif;color:var(--ink);background:#fff}
+img{display:block;max-width:100%} a{color:inherit;text-decoration:none} button{font:inherit}
+.wrap{width:min(var(--max),calc(100% - 44px));margin:0 auto}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--red);font-weight:900;letter-spacing:.15em;font-size:12px}
+.eyebrow:before{content:"";width:42px;height:4px;border-radius:99px;background:var(--red)}
+.section{padding:76px 0}.section.soft{background:var(--soft)}.section.dark{background:var(--dark);color:#fff}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:28px}
+.section-head h2{font-size:clamp(34px,4vw,62px);line-height:1.05;margin:10px 0 0}
+.section-head p{max-width:660px;color:var(--muted);font-size:18px;line-height:1.7;margin:0}
+.section.dark .section-head p{color:#BBC6CE}
+.header{position:sticky;top:0;z-index:80;height:92px;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{width:190px;max-height:64px;object-fit:contain;object-position:left center}
+.desktop-nav{display:flex;align-items:center;gap:34px;font-weight:800;color:#4A5864}
+.desktop-nav a{position:relative;padding:14px 0}.desktop-nav a:after{content:"";position:absolute;left:0;right:100%;bottom:4px;height:3px;background:var(--red);transition:.22s}.desktop-nav a:hover:after{right:0}
+.lang-btn{width:60px;height:48px;border-radius:999px;border:1px solid #CDD6DC;background:#fff;font-weight:900;cursor:pointer}
+.menu-btn{display:none;width:48px;height:48px;border-radius:14px;border:1px solid #D5DDE2;background:#fff}
+.menu-btn:before,.menu-btn:after{content:"";display:block;width:20px;height:2px;background:#1E2A33;margin:5px auto}
+.mobile-drawer{display:none;position:fixed;inset:92px 0 auto 0;background:#fff;border-bottom:1px solid var(--line);z-index:70;padding:14px 22px 24px;box-shadow:0 18px 40px rgba(0,0,0,.1)}
+.mobile-drawer a{display:block;padding:14px 6px;border-bottom:1px solid #EDF1F3;font-weight:800}.menu-open .mobile-drawer{display:block}
+.hero{min-height:690px;display:grid;align-items:end;background:linear-gradient(90deg,rgba(4,15,23,.83),rgba(4,15,23,.24)),url("assets/preview-01.webp") center/cover no-repeat;color:#fff}
+.hero-inner{padding:110px 0 90px}.hero h1{font-size:clamp(48px,7vw,92px);line-height:.98;max-width:800px;margin:18px 0}.hero p{max-width:760px;font-size:21px;line-height:1.8;color:#EEF4F7;margin:0}
+.hero-actions{display:flex;gap:14px;margin-top:28px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:14px;font-weight:900;border:1px solid transparent}.btn.red{background:var(--red);color:#fff}.btn.ghost{border-color:rgba(255,255,255,.65);color:#fff;background:rgba(255,255,255,.06)}
+.solution-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.solution-card{position:relative;min-height:470px;border-radius:22px;overflow:hidden;color:#fff;background:#111;box-shadow:0 16px 45px rgba(26,38,48,.13)}
+.solution-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.35s}.solution-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,12,18,.05) 28%,rgba(7,12,18,.86) 100%)}.solution-card:hover img{transform:scale(1.025)}
+.solution-copy{position:absolute;z-index:2;left:22px;right:22px;bottom:20px}.solution-copy small{letter-spacing:.14em;font-weight:900;color:#D6DEE4}.solution-copy h3{font-size:27px;line-height:1.15;margin:7px 0}.solution-copy p{font-size:14px;color:#E0E6EA;line-height:1.55;margin:0}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.tag{font-size:11px;padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22)}
+.card-arrow{position:absolute;z-index:3;right:18px;top:18px;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--red);font-size:24px;font-weight:900}
+.maintenance-feature{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:stretch;background:var(--dark);color:#fff;border-radius:30px;overflow:hidden}
+.maintenance-media{min-height:520px;background:url("assets/preview-02.webp") center/cover no-repeat}.maintenance-copy{padding:52px 50px;display:flex;flex-direction:column;justify-content:center}
+.maintenance-copy h2{font-size:clamp(34px,4vw,58px);line-height:1.05;margin:14px 0}.maintenance-copy p{color:#C3CED6;line-height:1.75;font-size:18px}
+.service-mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0}.service-mini{min-height:92px;padding:17px 18px;border:1px solid #33424D;border-radius:16px;background:#111D26;font-weight:800;display:flex;align-items:center;gap:15px;transition:.2s ease}.service-mini:hover{border-color:#556875;background:#14232D;transform:translateY(-2px)}.service-icon{width:48px;height:48px;flex:0 0 48px;border-radius:14px;display:grid;place-items:center;background:rgba(230,30,37,.09);color:#fff;border:1px solid rgba(230,30,37,.3)}.service-icon svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.service-icon svg path:nth-last-child(1){stroke:#E61E25}
+.delivery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.delivery-card{position:relative;min-height:370px;border-radius:20px;overflow:hidden;color:#fff}.delivery-card img{position:absolute;width:100%;height:100%;object-fit:cover}.delivery-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.78))}
+.delivery-copy{position:absolute;z-index:2;left:20px;right:20px;bottom:20px}.delivery-copy h3{font-size:25px;margin:4px 0}.delivery-copy p{margin:0;color:#D7E0E5;font-size:13px;line-height:1.5}
+.innovation-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.innovation-card{border:1px solid #2A3944;border-radius:20px;overflow:hidden;background:var(--dark2)}.innovation-card img{width:100%;aspect-ratio:16/10;object-fit:cover}.innovation-copy{padding:20px}.innovation-copy small{color:#FF6167;font-weight:900;letter-spacing:.11em}.innovation-copy h3{font-size:23px;margin:6px 0}.innovation-copy p{color:#BDCBD4;line-height:1.6;margin:0}
+.cta{background:linear-gradient(135deg,#111B24,#1C2A34);color:#fff;border-radius:28px;padding:48px;display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h2{font-size:clamp(32px,4vw,52px);margin:0 0 10px}.cta p{color:#C3CDD4;margin:0;line-height:1.7}
+.footer{padding:30px 0 110px;border-top:1px solid var(--line);color:#66727B;font-size:13px}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.mobile-bottom{display:none}
+.page-hero{padding:72px 0 52px;background:var(--dark);color:#fff}.page-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}.page-hero h1{font-size:clamp(42px,6vw,78px);line-height:1.02;margin:14px 0}.page-hero p{color:#C2CCD3;font-size:18px;line-height:1.7}.page-hero-image{border-radius:24px;overflow:hidden;aspect-ratio:16/10}.page-hero-image img{width:100%;height:100%;object-fit:cover}
+.video-section{padding:64px 0}.video-carousel{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.video-card{border:1px solid var(--line);border-radius:20px;background:#fff;overflow:hidden;cursor:pointer;box-shadow:0 10px 28px rgba(20,32,42,.06)}.video-cover{position:relative;aspect-ratio:16/9;overflow:hidden;background:#E8EDF0}.video-cover img{width:100%;height:100%;object-fit:cover}.video-cover:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.22))}
+.play-disc{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.96);box-shadow:0 12px 34px rgba(0,0,0,.24)}.play-disc:after{content:"";position:absolute;left:27px;top:20px;border-left:19px solid var(--red);border-top:12px solid transparent;border-bottom:12px solid transparent}
+.video-time{position:absolute;z-index:3;right:10px;bottom:10px;background:rgba(3,10,16,.76);color:#fff;border-radius:999px;padding:5px 8px;font-size:10px}.video-copy{padding:17px}.video-copy small{color:var(--red);font-weight:900;letter-spacing:.1em}.video-copy h3{margin:5px 0 0;font-size:20px}
+.application-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.application-card{padding:24px;border:1px solid var(--line);border-radius:18px;background:#fff}.application-card h3{margin:0 0 7px;font-size:21px}.application-card p{margin:0;color:var(--muted);line-height:1.6}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.process-step{padding:22px;border-radius:18px;background:#fff;border:1px solid var(--line)}.process-step strong{color:var(--red);font-size:12px;letter-spacing:.12em}.process-step h3{font-size:20px;margin:6px 0}.process-step p{font-size:13px;line-height:1.6;color:var(--muted);margin:0}
+.maintenance-services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.maintenance-service{position:relative;padding:28px 82px 28px 28px;border:1px solid var(--line);border-radius:20px;background:#fff;min-height:210px}.maintenance-service h3{font-size:23px;margin:8px 0}.maintenance-service p{color:var(--muted);line-height:1.65;margin:0}.maintenance-service .num{color:var(--red);font-size:12px;font-weight:900;letter-spacing:.14em}.maintenance-icon{position:absolute;right:22px;top:22px;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:#FFF1F2;color:#293641;border:1px solid #F5C7CA}.maintenance-icon svg{width:29px;height:29px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.roadmap{padding:34px;border-radius:24px;background:#111D26;color:#fff}.roadmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}.roadmap-card{padding:20px;border:1px solid #34434E;border-radius:16px;background:#172630}.roadmap-card b{display:block;margin-bottom:6px}.roadmap-card span{color:#BBC6CE;font-size:13px;line-height:1.55}
+.video-modal{position:fixed;inset:0;z-index:150;display:none;place-items:center;background:rgba(4,10,15,.84);padding:18px}.video-modal.open{display:grid}.video-dialog{width:min(980px,100%);border-radius:20px;overflow:hidden;background:#fff}.video-dialog-head{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}.video-dialog-head strong{font-size:18px}.video-close{width:42px;height:42px;border-radius:50%;border:1px solid #D8E0E6;background:#fff;font-size:22px;cursor:pointer}.video-stage{position:relative;aspect-ratio:16/9;background:#091119;overflow:hidden}.video-stage img,.video-stage iframe,.video-stage video{width:100%;height:100%;object-fit:cover;border:0;display:block}.video-stage>img{opacity:.48}.video-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#fff;text-align:center;padding:26px}.video-fallback .play-disc{position:relative;left:auto;top:auto;transform:none;margin-bottom:80px}.video-fallback p{max-width:560px;color:#CCD7DE}
+.carousel-controls{display:none}
+@media (max-width:1199px){
+  .wrap{width:min(100% - 34px,1080px)}.desktop-nav{gap:22px;font-size:14px}.logo{width:165px}
+  .solution-grid,.delivery-grid{grid-template-columns:repeat(2,1fr)}.solution-card{min-height:420px}
+  .maintenance-feature{grid-template-columns:1fr}.maintenance-media{min-height:400px}
+  .innovation-grid{grid-template-columns:repeat(3,1fr)}.video-carousel{grid-template-columns:repeat(2,1fr)}
+  .application-grid,.maintenance-services{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:760px){
+  body{padding-bottom:74px}.wrap{width:calc(100% - 28px)}.header{height:76px}.logo{width:128px}.desktop-nav{display:none}.menu-btn{display:block}.mobile-drawer{inset:76px 0 auto 0}
+  .hero{min-height:640px;background-position:58% center}.hero-inner{padding:100px 0 74px}.hero h1{font-size:48px;max-width:360px}.hero p{font-size:17px;line-height:1.65}.hero-actions{display:grid;grid-template-columns:1fr 1fr}
+  .section{padding:52px 0}.section-head{display:block;margin-bottom:20px}.section-head h2{font-size:38px}.section-head p{font-size:15px;margin-top:12px}
+  .solution-grid{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 0 10px;scrollbar-width:none}.solution-grid::-webkit-scrollbar{display:none}.solution-card{flex:0 0 88%;min-height:480px;scroll-snap-align:start}
+  .maintenance-copy{padding:34px 24px}.maintenance-copy p{font-size:15px}.maintenance-media{min-height:320px}.service-mini-grid{grid-template-columns:1fr 1fr}
+  .delivery-grid{display:flex;overflow-x:auto;gap:12px;scroll-snap-type:x mandatory;scrollbar-width:none}.delivery-grid::-webkit-scrollbar{display:none}.delivery-card{flex:0 0 85%;min-height:420px;scroll-snap-align:start}
+  .innovation-grid{display:flex;overflow-x:auto;gap:12px;scroll-snap-type:x mandatory;scrollbar-width:none}.innovation-grid::-webkit-scrollbar{display:none}.innovation-card{flex:0 0 86%;scroll-snap-align:start}
+  .cta{padding:30px 24px;display:block}.cta .btn{margin-top:20px;width:100%}.footer{padding-bottom:30px}
+  .mobile-bottom{position:fixed;z-index:90;left:0;right:0;bottom:0;height:74px;display:grid;grid-template-columns:repeat(4,1fr);background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+  .mobile-bottom a{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;font-size:11px;color:#58656F}.mobile-bottom b{font-size:18px;color:#111}
+  .page-hero{padding:46px 0 36px}.page-hero-grid{grid-template-columns:1fr}.page-hero h1{font-size:44px}.page-hero-image{order:-1;aspect-ratio:16/9}
+  .video-section{padding:46px 0}.video-carousel{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:10px}.video-carousel::-webkit-scrollbar{display:none}.video-card{flex:0 0 88%;scroll-snap-align:start}
+  .carousel-controls{display:flex;justify-content:space-between;align-items:center;margin-top:8px;color:#6B7780;font-size:12px}.carousel-controls .arrows{display:flex;gap:7px}.carousel-controls button{width:38px;height:38px;border-radius:50%;border:1px solid #D5DDE2;background:#fff}
+  .application-grid,.maintenance-services,.process,.roadmap-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:760px){.service-mini{min-height:84px;padding:14px;gap:11px}.service-icon{width:42px;height:42px;flex-basis:42px;border-radius:12px}.service-icon svg{width:26px;height:26px}.maintenance-service{min-height:0;padding:24px 76px 24px 22px}.maintenance-icon{right:18px;top:18px;width:44px;height:44px}}
+
+
+/* ===== V1.5d｜Homepage Lifecycle Service visual redesign ===== */
+.maintenance-home-section{
+  padding:72px 0;
+  background:#0A141D;
+}
+.maintenance-showcase{
+  position:relative;
+  overflow:hidden;
+  border-radius:28px;
+  padding:34px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 85% 10%,rgba(230,30,37,.14),transparent 32%),
+    linear-gradient(180deg,#0B1720,#0A141D);
+  border:1px solid #263743;
+}
+.maintenance-showcase-head{
+  max-width:1120px;
+  margin-bottom:24px;
+}
+.maintenance-showcase-head h2{
+  margin:10px 0 12px;
+  font-size:clamp(34px,4vw,58px);
+  line-height:1.05;
+}
+.maintenance-showcase-head p{
+  max-width:1200px;
+  margin:0;
+  color:#D5DEE4;
+  font-size:18px;
+  line-height:1.75;
+}
+.maintenance-visual-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+.maintenance-visual-card{
+  position:relative;
+  min-height:220px;
+  overflow:hidden;
+  border-radius:18px;
+  border:1px solid #425665;
+  color:#fff;
+  background-color:#111E27;
+  background-size:cover;
+  background-position:center;
+  isolation:isolate;
+  transition:transform .22s ease,border-color .22s ease;
+}
+.maintenance-visual-card:hover{
+  transform:translateY(-2px);
+  border-color:#748897;
+}
+.maintenance-visual-card:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:
+    linear-gradient(90deg,rgba(4,12,18,.92) 0%,rgba(4,12,18,.76) 50%,rgba(4,12,18,.32) 100%),
+    linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.30));
+}
+.maintenance-visual-card.card-diagnosis{
+  background-image:url("assets/preview-03.webp");
+  background-position:center 34%;
+}
+.maintenance-visual-card.card-repair{
+  background-image:url("assets/preview-02.webp");
+  background-position:center 58%;
+}
+.maintenance-visual-card.card-preventive{
+  background-image:url("assets/preview-04.webp");
+  background-position:center 46%;
+}
+.maintenance-visual-card.card-remote{
+  background-image:url("assets/preview-01.webp");
+  background-position:center 55%;
+}
+.maintenance-card-copy{
+  position:absolute;
+  left:26px;
+  top:22px;
+  bottom:18px;
+  width:min(56%,420px);
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+.maintenance-card-copy h3{
+  margin:0;
+  font-size:27px;
+  line-height:1.15;
+}
+.maintenance-card-copy h3:after{
+  content:"";
+  display:block;
+  width:24px;
+  height:3px;
+  margin-top:10px;
+  background:var(--red);
+  border-radius:99px;
+}
+.maintenance-card-copy p{
+  margin:10px 0 12px;
+  color:#D7E0E6;
+  font-size:14px;
+  line-height:1.5;
+}
+.maintenance-card-arrow{
+  margin-top:auto;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  border:1px solid var(--red);
+  color:#fff;
+  font-weight:900;
+}
+.service-icon-large{
+  position:absolute;
+  z-index:2;
+  right:28px;
+  top:50%;
+  transform:translateY(-50%);
+  width:112px;
+  height:112px;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  filter:drop-shadow(0 8px 18px rgba(0,0,0,.25));
+}
+.service-icon-large svg{
+  width:100%;
+  height:100%;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:2.2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.service-icon-large svg circle:last-of-type{
+  stroke:var(--red);
+}
+.maintenance-cta{
+  width:100%;
+  margin-top:16px;
+  gap:10px;
+  border-radius:14px;
+  min-height:58px;
+  font-size:18px;
+  box-shadow:0 10px 30px rgba(230,30,37,.18);
+}
+
+@media(max-width:760px){
+  .maintenance-home-section{padding:46px 0}
+  .maintenance-showcase{
+    padding:20px 14px 16px;
+    border-radius:22px;
+  }
+  .maintenance-showcase-head h2{
+    font-size:34px;
+  }
+  .maintenance-showcase-head p{
+    font-size:15px;
+    line-height:1.65;
+  }
+  .maintenance-visual-grid{
+    gap:10px;
+  }
+  .maintenance-visual-card{
+    min-height:190px;
+    border-radius:14px;
+  }
+  .maintenance-card-copy{
+    left:14px;
+    top:14px;
+    bottom:12px;
+    width:62%;
+  }
+  .maintenance-card-copy h3{
+    font-size:20px;
+  }
+  .maintenance-card-copy p{
+    font-size:11.5px;
+    line-height:1.42;
+    margin-top:8px;
+  }
+  .service-icon-large{
+    width:66px;
+    height:66px;
+    right:12px;
+  }
+  .maintenance-card-arrow{
+    width:28px;
+    height:28px;
+    font-size:13px;
+  }
+  .maintenance-cta{
+    min-height:54px;
+    font-size:16px;
+  }
+}
+@media(max-width:390px){
+  .maintenance-card-copy p{
+    display:none;
+  }
+  .maintenance-visual-card{
+    min-height:158px;
+  }
+  .maintenance-card-copy h3{
+    font-size:19px;
+  }
+  .service-icon-large{
+    width:58px;
+    height:58px;
+  }
+}
+
+
+/* ===== V1.5e visual refinement ===== */
+
+/* Project-delivery focal point for the new real engineering photo */
+.delivery-card:nth-child(3) img{
+  object-position:center 46%;
+}
+
+/* Maintenance tiles are now visual proof cards, not mini navigation buttons. */
+.maintenance-visual-card{
+  cursor:default;
+}
+.maintenance-visual-card:hover{
+  transform:none;
+  border-color:#526775;
+}
+.maintenance-card-copy{
+  width:min(58%,430px);
+}
+.maintenance-card-copy p{
+  max-width:320px;
+}
+.service-icon-large{
+  width:96px;
+  height:96px;
+  right:26px;
+  opacity:.96;
+}
+
+/* Cleaner CTA hierarchy: one obvious action for the whole maintenance block. */
+.maintenance-cta{
+  margin-top:18px;
+  letter-spacing:.01em;
+}
+
+/* Improve mobile hierarchy and reduce visual noise. */
+@media(max-width:760px){
+  .maintenance-showcase-head h2{
+    font-size:31px;
+    line-height:1.10;
+    max-width:330px;
+  }
+  .maintenance-showcase-head p{
+    font-size:14px;
+    line-height:1.62;
+    max-width:350px;
+  }
+  .maintenance-visual-card{
+    min-height:176px;
+  }
+  .maintenance-card-copy{
+    width:60%;
+  }
+  .maintenance-card-copy h3{
+    font-size:19px;
+  }
+  .maintenance-card-copy p{
+    font-size:11px;
+    line-height:1.38;
+    max-width:170px;
+  }
+  .service-icon-large{
+    width:58px;
+    height:58px;
+    right:11px;
+  }
+}
+@media(max-width:390px){
+  .maintenance-showcase-head h2{
+    font-size:29px;
+  }
+  .maintenance-visual-card{
+    min-height:158px;
+  }
+  .service-icon-large{
+    width:54px;
+    height:54px;
+  }
+}
+
+.review-page{display:none}
+.review-page.active{display:block}
+</style>
+</head>
+<body>
+<header class="header"><div class="wrap header-inner"><a href="#home" data-route="home"><img alt="ATNR" class="logo" src="assets/preview-05.png"/></a><nav class="desktop-nav"><a href="#solutions" data-route="home" data-target="solutions"><span data-en="Solutions" data-zh="解決方案">解決方案</span></a><a href="#maintenance" data-route="maintenance"><span data-en="Maintenance" data-zh="維保服務">維保服務</span></a><a href="#delivery" data-route="home" data-target="delivery"><span data-en="Local Delivery" data-zh="在地交付">在地交付</span></a><a href="#innovation" data-route="home" data-target="innovation"><span data-en="Innovation" data-zh="創新應用">創新應用</span></a><a href="#contact" data-route="home" data-target="contact"><span data-en="Contact" data-zh="聯絡我們">聯絡我們</span></a><button class="lang-btn" data-lang-toggle="">EN</button></nav><button aria-label="Menu" class="menu-btn" data-menu-toggle=""></button></div></header><div class="mobile-drawer"><a href="#solutions" data-route="home" data-target="solutions"><span data-en="Solutions" data-zh="解決方案">解決方案</span></a><a href="#maintenance" data-route="maintenance"><span data-en="Maintenance" data-zh="維保服務">維保服務</span></a><a href="#delivery" data-route="home" data-target="delivery"><span data-en="Local Delivery" data-zh="在地交付">在地交付</span></a><a href="#innovation" data-route="home" data-target="innovation"><span data-en="Innovation" data-zh="創新應用">創新應用</span></a><a href="#contact" data-route="home" data-target="contact"><span data-en="Contact" data-zh="聯絡我們">聯絡我們</span></a><button class="lang-btn" data-lang-toggle="" style="margin-top:14px">EN</button></div>
+<div id="page-home" class="review-page active"><main>
+<section class="hero"><div class="wrap hero-inner"><div class="eyebrow">THAILAND BASE · SMART MANUFACTURING</div><h1><span data-en="Make Smart Manufacturing Work" data-zh="讓智慧製造真正落地">讓智慧製造真正落地</span></h1><p><span data-en="Thailand-based local support for smart manufacturing, automation integration, project delivery and lifecycle service." data-zh="以泰國在地服務為基礎，提供智慧製造、自動化整合、專案交付與生命週期服務。">以泰國在地服務為基礎，提供智慧製造、自動化整合、專案交付與生命週期服務。</span></p><div class="hero-actions"><a class="btn red" href="#solutions"><span data-en="Explore Solutions" data-zh="查看解決方案">查看解決方案</span></a><a class="btn ghost" href="#maintenance" data-route="maintenance"><span data-en="Maintenance Service" data-zh="維保服務">維保服務</span></a></div></div></section>
+<section class="section" id="solutions"><div class="wrap"><div class="section-head"><div><div class="eyebrow">CORE SOLUTIONS</div><h2><span data-en="Four Core Solutions" data-zh="四大解決方案">四大解決方案</span></h2></div><p><span data-en="Four focused solution entry points. Each opens a dedicated page with short real-world application videos." data-zh="首頁只呈現四個核心入口；點擊後進入各方案案例影片頁，以真實應用證明工程能力。">首頁只呈現四個核心入口；點擊後進入各方案案例影片頁，以真實應用證明工程能力。</span></p></div><div class="solution-grid"><a class="solution-card" href="#solution-machining" data-route="solution-machining"><img alt="" loading="lazy" src="assets/preview-06.webp"/><span class="card-arrow">＋</span><div class="solution-copy"><small>01 · MACHINING</small><h3><span data-en="Flexible Machining Automation" data-zh="柔性機加工智能產線">柔性機加工智能產線</span></h3><p><span data-en="CNC tending · Flexible linkage · Multi-process" data-zh="CNC 上下料 · 柔性連線 · 多工序協同">CNC 上下料 · 柔性連線 · 多工序協同</span></p></div></a><a class="solution-card" href="#solution-finishing" data-route="solution-finishing"><img alt="" loading="lazy" src="assets/preview-07.webp"/><span class="card-arrow">＋</span><div class="solution-copy"><small>02 · SURFACE FINISHING</small><h3><span data-en="Metal Component Surface Finishing" data-zh="金屬零組件表面處理">金屬零組件表面處理</span></h3><p><span data-en="Deburring · Grinding · Polishing · Automation" data-zh="去毛刺 · 打磨 · 拋光 · 製程自動化">去毛刺 · 打磨 · 拋光 · 製程自動化</span></p></div></a><a class="solution-card" href="#solution-welding" data-route="solution-welding"><img alt="" loading="lazy" src="assets/preview-08.webp"/><span class="card-arrow">＋</span><div class="solution-copy"><small>03 · WELDING &amp; LASER</small><h3><span data-en="Industrial Welding &amp; Laser Automation" data-zh="工業焊接與雷射加工自動化">工業焊接與雷射加工自動化</span></h3><p><span data-en="Robotic welding · Positioning · Laser processing" data-zh="機器人焊接 · 變位協同 · 雷射加工">機器人焊接 · 變位協同 · 雷射加工</span></p></div></a><a class="solution-card" href="#solution-smart-factory" data-route="solution-smart-factory"><img alt="" loading="lazy" src="assets/preview-09.webp"/><span class="card-arrow">＋</span><div class="solution-copy"><small>04 · SMART FACTORY</small><h3><span data-en="Smart Factory Integration" data-zh="智慧工廠">智慧工廠</span></h3><p><span data-en="Automation cells · Smart logistics · Connectivity" data-zh="自動化單元 · 智慧物流 · 設備聯網">自動化單元 · 智慧物流 · 設備聯網</span></p></div></a></div></div></section>
+<section class="section maintenance-home-section">
+<div class="wrap">
+<div class="maintenance-showcase">
+<div class="maintenance-showcase-head">
+<div class="eyebrow">LIFECYCLE SERVICE</div>
+<h2><span data-en="Multi-brand Robot Lifecycle Service" data-zh="多品牌工業機器人維保服務">多品牌工業機器人維保服務</span></h2>
+<p><span data-en="From fault diagnosis and emergency repair to preventive maintenance and remote technical support, lifecycle service becomes a continuous customer-support entry point." data-zh="從故障診斷、緊急維修到預防保養與遠程技術支持，將維保服務做成 ATNR 的持續服務入口。">從故障診斷、緊急維修到預防保養與遠程技術支持，將維保服務做成 ATNR 的持續服務入口。</span></p>
+</div>
+<div class="maintenance-visual-grid">
+<article class="maintenance-visual-card card-diagnosis">
+<div class="maintenance-card-copy">
+<h3><span data-en="Fault Diagnosis" data-zh="故障診斷">故障診斷</span></h3>
+<p><span data-en="Identify abnormalities quickly and provide professional diagnostic advice." data-zh="快速定位異常，提供專業診斷建議。">快速定位異常，提供專業診斷建議。</span></p>
+</div>
+<span class="service-icon service-icon-large">
+<svg aria-hidden="true" viewbox="0 0 48 48"><rect height="20" rx="3" width="27" x="7" y="8"></rect><path d="M11 20h6l3-7 5 14 3-7h6"></path><path d="M16 34h10"></path><path d="M21 28v6"></path><circle cx="35" cy="32" r="7"></circle><path d="m40 37 4 4"></path></svg>
+</span>
+</article>
+<article class="maintenance-visual-card card-repair">
+<div class="maintenance-card-copy">
+<h3><span data-en="Emergency Repair" data-zh="緊急維修">緊急維修</span></h3>
+<p><span data-en="Rapid response and professional intervention to reduce downtime." data-zh="快速響應、專業處置，降低停機時間。">快速響應、專業處置，降低停機時間。</span></p>
+</div>
+<span class="service-icon service-icon-large">
+<svg aria-hidden="true" viewbox="0 0 48 48"><path d="M30 7a10 10 0 0 0-9 14L8 34a4 4 0 1 0 6 6l13-13a10 10 0 0 0 14-9l-7 5-7-7z"></path><path d="m33 30 9 9"></path></svg>
+</span>
+</article>
+<article class="maintenance-visual-card card-preventive">
+<div class="maintenance-card-copy">
+<h3><span data-en="Preventive Maintenance" data-zh="預防保養">預防保養</span></h3>
+<p><span data-en="Routine inspection and maintenance to improve reliability and equipment life." data-zh="定期檢查與保養，提升設備穩定性與使用壽命。">定期檢查與保養，提升設備穩定性與使用壽命。</span></p>
+</div>
+<span class="service-icon service-icon-large">
+<svg aria-hidden="true" viewbox="0 0 48 48"><rect height="29" rx="4" width="30" x="7" y="10"></rect><path d="M14 6v8M30 6v8M7 18h30"></path><path d="m16 28 5 5 10-11"></path></svg>
+</span>
+</article>
+<article class="maintenance-visual-card card-remote">
+<div class="maintenance-card-copy">
+<h3><span data-en="Remote Support" data-zh="遠程支持">遠程支持</span></h3>
+<p><span data-en="Remote technical support for faster troubleshooting and response." data-zh="透過遠程技術支持，即時協助問題排查。">透過遠程技術支持，即時協助問題排查。</span></p>
+</div>
+<span class="service-icon service-icon-large">
+<svg aria-hidden="true" viewbox="0 0 48 48"><path d="M9 30v-5a15 15 0 0 1 30 0v5"></path><rect height="12" rx="3" width="8" x="6" y="28"></rect><rect height="12" rx="3" width="8" x="34" y="28"></rect><path d="M34 40c-2 3-5 4-10 4"></path><circle cx="22" cy="44" r="2"></circle><path d="M19 23a8 8 0 0 1 10 0M22 19a12 12 0 0 1 4 0"></path></svg>
+</span>
+</article>
+</div>
+<a class="btn red maintenance-cta" href="#maintenance" data-route="maintenance">
+<span data-en="View Maintenance Service" data-zh="查看維保服務">查看維保服務</span>
+<span aria-hidden="true">→</span>
+</a>
+</div>
+</div>
+</section>
+<section class="section" id="delivery"><div class="wrap"><div class="section-head"><div><div class="eyebrow">THAILAND DELIVERY</div><h2><span data-en="Local Service &amp; Project Delivery" data-zh="在地服務與專案交付">在地服務與專案交付</span></h2></div><p><span data-en="Real Thailand engineering work demonstrates local coordination, integration, delivery and ongoing support." data-zh="用真實泰國工程現場證明對接、整合、交付與持續服務能力。">用真實泰國工程現場證明對接、整合、交付與持續服務能力。</span></p></div><div class="delivery-grid">
+<article class="delivery-card"><img loading="lazy" src="assets/preview-10.webp"/><div class="delivery-copy"><small>01</small><h3><span data-en="Thailand Local Support" data-zh="泰國在地服務">泰國在地服務</span></h3><p><span data-en="Requirement confirmation and local coordination" data-zh="需求確認與現場對接">需求確認與現場對接</span></p></div></article>
+<article class="delivery-card"><img loading="lazy" src="assets/preview-04.webp"/><div class="delivery-copy"><small>02</small><h3><span data-en="Engineering Integration" data-zh="工程整合">工程整合</span></h3><p><span data-en="Mechanical, controls, software and equipment integration" data-zh="機械、電控、程式與設備協同">機械、電控、程式與設備協同</span></p></div></article>
+<article class="delivery-card"><img loading="lazy" src="assets/preview-11.webp"/><div class="delivery-copy"><small>03</small><h3><span data-en="Project Delivery" data-zh="專案交付">專案交付</span></h3><p><span data-en="Installation, commissioning, FAT / SAT and training" data-zh="安裝、調試、FAT / SAT 與培訓">安裝、調試、FAT / SAT 與培訓</span></p></div></article>
+<article class="delivery-card"><img loading="lazy" src="assets/preview-03.webp"/><div class="delivery-copy"><small>04</small><h3><span data-en="Ongoing Technical Support" data-zh="持續技術支持">持續技術支持</span></h3><p><span data-en="Repair, improvement and ongoing service" data-zh="維修、改善與持續服務">維修、改善與持續服務</span></p></div></article>
+</div></div></section>
+<section class="section dark" id="innovation"><div class="wrap"><div class="section-head"><div><div class="eyebrow">INNOVATION ROADMAP</div><h2><span data-en="Innovation Applications" data-zh="創新應用">創新應用</span></h2></div><p><span data-en="This section shows development directions without presenting roadmap capabilities as mature products." data-zh="這一區只呈現發展方向，不把未完成的未來能力包裝成既有成熟產品。">這一區只呈現發展方向，不把未完成的未來能力包裝成既有成熟產品。</span></p></div><div class="innovation-grid">
+<article class="innovation-card"><img loading="lazy" src="assets/preview-12.webp"/><div class="innovation-copy"><small>01 · ROADMAP</small><h3><span data-en="Intelligent Mobile Robots" data-zh="智能移動機器人">智能移動機器人</span></h3><p><span data-en="Material handling, logistics and flexible dispatch applications." data-zh="搬運、物流與柔性調度應用。">搬運、物流與柔性調度應用。</span></p></div></article>
+<article class="innovation-card"><img loading="lazy" src="assets/preview-13.webp"/><div class="innovation-copy"><small>02 · ROADMAP</small><h3><span data-en="Intelligent Inspection" data-zh="智能巡檢">智能巡檢</span></h3><p><span data-en="Inspection and sensing applications for industrial environments." data-zh="面向工業場域的巡檢與感知應用。">面向工業場域的巡檢與感知應用。</span></p></div></article>
+<article class="innovation-card"><img loading="lazy" src="assets/preview-14.webp"/><div class="innovation-copy"><small>03 · ROADMAP</small><h3><span data-en="AI-assisted Remote Support" data-zh="AI 遠程支持">AI 遠程支持</span></h3><p><span data-en="AI-assisted troubleshooting will be introduced progressively on top of real service cases and accumulated knowledge." data-zh="以真實維保案例與知識沉澱為基礎，逐步導入 AI 輔助問題排查。">以真實維保案例與知識沉澱為基礎，逐步導入 AI 輔助問題排查。</span></p></div></article>
+</div></div></section>
+<section class="section" id="contact"><div class="wrap"><div class="cta"><div><h2><span data-en="New project or equipment support needed?" data-zh="有新專案，或現有設備需要支援？">有新專案，或現有設備需要支援？</span></h2><p><span data-en="Start with a formal email inquiry. A company-level WhatsApp Business entry can be connected later without tying the site to a personal account." data-zh="先從 Email 建立正式聯繫；公司級 WhatsApp Business 後續接入，不綁定個人帳號。">先從 Email 建立正式聯繫；公司級 WhatsApp Business 後續接入，不綁定個人帳號。</span></p></div><a class="btn red" href="mailto:boss@atn-robot.com?subject=ATNR%20Project%20Inquiry"><span data-en="Email ATNR" data-zh="Email 洽談">Email 洽談</span></a></div></div></section>
+</main></div>
+<div id="page-solution-machining" class="review-page"><main><section class="page-hero"><div class="wrap page-hero-grid"><div><div class="eyebrow">SOLUTION · MACHINING</div><h1><span data-en="Flexible Machining Automation" data-zh="柔性機加工智能產線">柔性機加工智能產線</span></h1><p><span data-en="From single CNC tending to multi-machine flexible linkage, integrate robots, equipment and material flow around real process and capacity needs." data-zh="從 CNC 單機上下料到多機柔性連線，依製程與產能需求整合機器人、設備與物流。">從 CNC 單機上下料到多機柔性連線，依製程與產能需求整合機器人、設備與物流。</span></p></div><div class="page-hero-image"><img loading="eager" src="assets/preview-06.webp"/></div></div></section>
+<section class="video-section"><div class="wrap"><div class="section-head"><div><div class="eyebrow">PROJECT VIDEOS</div><h2><span data-en="Video Cases" data-zh="案例影片">案例影片</span></h2></div><p><span data-en="Free-First mode loads YouTube only after a click. Covers and case positions remain functional even before final video links are added." data-zh="影片採點擊後才載入 YouTube 的 Free-First 模式；正式影片尚未接入時，封面與案例位置仍能正常顯示。">影片採點擊後才載入 YouTube 的 Free-First 模式；正式影片尚未接入時，封面與案例位置仍能正常顯示。</span></p></div><div data-carousel-shell=""><div class="video-carousel" data-carousel=""><article class="video-card" data-video-index="0"><div class="video-cover"><img loading="lazy" src="assets/preview-06.webp"/><span class="play-disc"></span><span class="video-time">15–30 sec</span></div><div class="video-copy"><small>VIDEO CASE 01</small><h3><span data-en="Video Case 01" data-zh="案例影片 01">案例影片 01</span></h3></div></article><article class="video-card" data-video-index="1"><div class="video-cover"><img loading="lazy" src="assets/preview-15.webp"/><span class="play-disc"></span><span class="video-time">15–30 sec</span></div><div class="video-copy"><small>VIDEO CASE 02</small><h3><span data-en="Video Case 02" data-zh="案例影片 02">案例影片 02</span></h3></div></article><article class="video-card" data-video-index="2"><div class="video-cover"><img loading="lazy" src="assets/preview-16.webp"/><span class="play-disc"></span><span class="video-time">15–30 sec</span></div><div class="video-copy"><small>VIDEO CASE 03</small><h3><span data-en="Video Case 03" data-zh="案例影片 03">案例影片 03</span></h3></div></article></div><div class="carousel-controls"><span><span data-en="Swipe for more cases" data-zh="左右滑動查看更多案例">左右滑動查看更多案例</span></span><div class="arrows"><button data-carousel-prev="">←</button><button data-carousel-next="">→</button></div></div></div></div></section>
+<section class="section soft"><div class="wrap"><div class="section-head"><div><div class="eyebrow">APPLICATIONS</div><h2><span data-en="Typical Applications" data-zh="典型應用">典型應用</span></h2></div></div><div class="application-grid"><article class="application-card"><h3><span data-en="CNC Tending" data-zh="CNC 上下料">CNC 上下料</span></h3><p><span data-en="Implementation is evaluated around the part, cycle time and site conditions." data-zh="依客戶工件、節拍與現場條件評估導入方式。">依客戶工件、節拍與現場條件評估導入方式。</span></p></article><article class="application-card"><h3><span data-en="Multi-machine Coordination" data-zh="多機協同">多機協同</span></h3><p><span data-en="Implementation is evaluated around the part, cycle time and site conditions." data-zh="依客戶工件、節拍與現場條件評估導入方式。">依客戶工件、節拍與現場條件評估導入方式。</span></p></article><article class="application-card"><h3><span data-en="Flexible Linkage" data-zh="柔性連線">柔性連線</span></h3><p><span data-en="Implementation is evaluated around the part, cycle time and site conditions." data-zh="依客戶工件、節拍與現場條件評估導入方式。">依客戶工件、節拍與現場條件評估導入方式。</span></p></article></div></div></section>
+<section class="section"><div class="wrap"><div class="section-head"><div><div class="eyebrow">DELIVERY PATH</div><h2><span data-en="Implementation Path" data-zh="導入路徑">導入路徑</span></h2></div></div><div class="process"><article class="process-step"><strong>01</strong><h3><span data-en="Requirement" data-zh="需求確認">需求確認</span></h3><p><span data-en="Part, cycle time, quality and site conditions." data-zh="工件、節拍、品質與現場條件。">工件、節拍、品質與現場條件。</span></p></article><article class="process-step"><strong>02</strong><h3><span data-en="Concept" data-zh="方案評估">方案評估</span></h3><p><span data-en="Match equipment, robots, tooling and process." data-zh="設備、機器人、工裝與流程匹配。">設備、機器人、工裝與流程匹配。</span></p></article><article class="process-step"><strong>03</strong><h3><span data-en="Integration" data-zh="工程整合">工程整合</span></h3><p><span data-en="Mechanical, controls, software and safety integration." data-zh="機械、電控、程式與安全整合。">機械、電控、程式與安全整合。</span></p></article><article class="process-step"><strong>04</strong><h3><span data-en="Delivery" data-zh="交付支持">交付支持</span></h3><p><span data-en="Installation, commissioning, acceptance and support." data-zh="安裝、調試、驗收與後續服務。">安裝、調試、驗收與後續服務。</span></p></article></div></div></section>
+<section class="section soft"><div class="wrap"><div class="cta"><div><h2><span data-en="Have a similar application?" data-zh="有類似應用？">有類似應用？</span></h2><p><span data-en="Share the part, cycle time and site information for an initial review." data-zh="提供工件、節拍與現場資訊，我們可先做初步判讀。">提供工件、節拍與現場資訊，我們可先做初步判讀。</span></p></div><a class="btn red" href="mailto:boss@atn-robot.com?subject=ATNR%20Solution%20Inquiry"><span data-en="Email ATNR" data-zh="Email 洽談">Email 洽談</span></a></div></div></section></main></div>
+<div id="page-solution-finishing" class="review-page"><main><section class="page-hero"><div class="wrap page-hero-grid"><div><div class="eyebrow">SOLUTION · FINISHING</div><h1><span data-en="Metal Component Surface Finishing" data-zh="金屬零組件表面處理">金屬零組件表面處理</span></h1><p><span data-en="Focus on deburring, grinding, polishing and surface finishing to improve consistency, efficiency and operator safety." data-zh="聚焦去毛刺、打磨、拋光與表面精修，改善一致性、效率與作業安全。">聚焦去毛刺、打磨、拋光與表面精修，改善一致性、效率與作業安全。</span></p></div><div class="page-hero-image"><img loading="eager" src="assets/preview-07.webp"/></div></div></section>
+<section class="video-section"><div class="wrap"><div class="section-head"><div><div class="eyebrow">PROJECT VIDEOS</div><h2><span data-en="Video Cases" data-zh="案例影片">案例影片</span></h2></div><p><span data-en="Free-First mode loads YouTube only after a click. Covers and case positions remain functional even before final video links are added." data-zh="影片採點擊後才載入 YouTube 的 Free-First 模式；正式影片尚未接入時，封面與案例位置仍能正常顯示。">影片採點擊後才載入 YouTube 的 Free-First 模式；正式影片尚未接入時，封面與案例位置仍能正常顯示。</span></p></div><div data-carousel-shell=""><div class="video-carousel" data-carousel=""><article class="video-card" data-video-index="0"><div class="video-cover"><img loading="lazy" src="assets/preview-17.webp"/><span class="play-disc"></span><span class="video-time">15–30 sec</span></div><div class="video-copy"><small>VIDEO CASE 01</small><h3><span data-en="Video Case 01" data-zh="案例影片 01">案例影片 01</span></h3></div></article><article class="video-card" data-video-index="1"><div class="video-cover"><img loading="lazy" src="assets/preview-18.webp"/><span class="play-disc"></span><span class="video-time">15–30 sec</span></div><div class="video-copy"><small>VIDEO CASE 02</small><h3><span data-en="Video Case 02" data-zh="案例影片 02">案例影片 02</span></h3></div></article><article class="video-card" data-video-index="2"><div class="video-cover"><img loading="lazy" src="assets/preview-07.webp"/><span class="play-disc"></span><span class="video-time">15–30 sec</span></div><div class="video-copy"><small>VIDEO CASE 03</small><h3><span data-en="Video Case 03" data-zh="案例影片 03">案例影片 03</span></h3></div></article></div><div class="carousel-controls"><span><span data-en="Swipe for more cases" data-zh="左右滑動查看更多案例">左右滑動查看更多案例</span></span><div class="arrows"><button data-carousel-prev="">←</button><button data-carousel-next="">→</button></div></div></div></div></section>
+<section class="section soft"><div class="wrap"><div class="section-head"><div><div class="eyebrow">APPLICATIONS</div><h2><span data-en="Typical Applications" data-zh="典型應用">典型應用</span></h2></div></div><div class="application-grid"><article class="application-card"><h3><span data-en="Deburring" data-zh="去毛刺">去毛刺</span></h3><p><span data-en="Implementation is evaluated around the part, cycle time and site conditions." data-zh="依客戶工件、節拍與現場條件評估導入方式。">依客戶工件、節拍與現場條件評估導入方式。</span></p></article><article class="application-card"><h3><span data-en="Grinding &amp; Polishing" data-zh="打磨拋光">打磨拋光</span></h3><p><span data-en="Implementation is evaluated around the part, cycle time and site conditions." data-zh="依客戶工件、節拍與現場條件評估導入方式。">依客戶工件、節拍與現場條件評估導入方式。</span></p></article><article class="application-card"><h3><span data-en="Surface Finishing" data-zh="表面精修">表面精修</span></h3><p><span data-en="Implementation is evaluated around the part, cycle time and site conditions." data-zh="依客戶工件、節拍與現場條件評估導入方式。">依客戶工件、節拍與現場條件評估導入方式。</span></p></article></div></div></section>
+<section class="section"><div class="wrap"><div class="section-head"><div><div class="eyebrow">DELIVERY PATH</div><h2><span data-en="Implementation Path" data-zh="導入路徑">導入路徑</span></h2></div></div><div class="process"><article class="process-step"><strong>01</strong><h3><span data-en="Requirement" data-zh="需求確認">需求確認</span></h3><p><span data-en="Part, cycle time, quality and site conditions." data-zh="工件、節拍、品質與現場條件。">工件、節拍、品質與現場條件。</span></p></article><article class="process-step"><strong>02</strong><h3><span data-en="Concept" data-zh="方案評估">方案評估</span></h3><p><span data-en="Match equipment, robots, tooling and process." data-zh="設備、機器人、工裝與流程匹配。">設備、機器人、工裝與流程匹配。</span></p></article><article class="process-step"><strong>03</strong><h3><span data-en="Integration" data-zh="工程整合">工程整合</span></h3><p><span data-en="Mechanical, controls, software and safety integration." data-zh="機械、電控、程式與安全整合。">機械、電控、程式與安全整合。</span></p></article><article class="process-step"><strong>04</strong><h3><span data-en="Delivery" data-zh="交付支持">交付支持</span></h3><p><span data-en="Installation, commissioning, acceptance and support." data-zh="安裝、調試、驗收與後續服務。">安裝、調試、驗收與後續服務。</span></p></article></div></div></section>
+<section class="section soft"><div class="wrap"><div class="cta"><div><h2><span data-en="Have a similar application?" data-zh="有類似應用？">有類似應用？</span></h2><p><span data-en="Share the part, cycle time and site information for an initial review." data-zh="提供工件、節拍與現場資訊，我們可先做初步判讀。">提供工件、節拍與現場資訊，我們可先做初步判讀。</span></p></div><a class="btn red" href="mailto:boss@atn-robot.com?subject=ATNR%20Solution%20Inquiry"><span data-en="Email ATNR" data-zh="Email 洽談">Email 洽談</span></a></div></div></section></main></div>
+<div id="page-solution-welding" class="review-page"><main><section class="page-hero"><div class="wrap page-hero-grid"><div><div class="eyebrow">SOLUTION · WELDING</div><h1><span data-en="Industrial Welding &amp; Laser Automation" data-zh="工業焊接與雷射加工自動化">工業焊接與雷射加工自動化</span></h1><p><span data-en="Integrate robots, welding sources, positioners, tooling and laser-processing equipment into deliverable cells and line solutions." data-zh="整合機器人、焊接電源、變位機、工裝與雷射加工設備，形成可交付的工作站與產線方案。">整合機器人、焊接電源、變位機、工裝與雷射加工設備，形成可交付的工作站與產線方案。</span></p></div><div class="page-hero-image"><img loading="eager" src="assets/preview-08.webp"/></div></div></section>
+<section class="video-section"><div class="wrap"><div class="section-head"><div><div class="eyebrow">PROJECT VIDEOS</div><h2><span data-en="Video Cases" data-zh="案例影片">案例影片</span></h2></div><p><span data-en="Free-First mode loads YouTube only after a click. Covers and case positions remain functional even before final video links are added." data-zh="影片採點擊後才載入 YouTube 的 Free-First 模式；正式影片尚未接入時，封面與案例位置仍能正常顯示。">影片採點擊後才載入 YouTube 的 Free-First 模式；正式影片尚未接入時，封面與案例位置仍能正常顯示。</span></p></div><div data-carousel-shell=""><div class="video-carousel" data-carousel=""><article class="video-card" data-video-index="0"><div class="video-cover"><img loading="lazy" src="assets/preview-19.webp"/><span class="play-disc"></span><span class="video-time">15–30 sec</span></div><div class="video-copy"><small>VIDEO CASE 01</small><h3><span data-en="Video Case 01" data-zh="案例影片 01">案例影片 01</span></h3></div></article><article class="video-card" data-video-index="1"><div class="video-cover"><img loading="lazy" src="assets/preview-08.webp"/><span class="play-disc"></span><span class="video-time">15–30 sec</span></div><div class="video-copy"><small>VIDEO CASE 02</small><h3><span data-en="Video Case 02" data-zh="案例影片 02">案例影片 02</span></h3></div></article><article class="video-card" data-video-index="2"><div class="video-cover"><img loading="lazy" src="assets/preview-20.webp"/><span class="play-disc"></span><span class="video-time">15–30 sec</span></div><div class="video-copy"><small>VIDEO CASE 03</small><h3><span data-en="Video Case 03" data-zh="案例影片 03">案例影片 03</span></h3></div></article></div><div class="carousel-controls"><span><span data-en="Swipe for more cases" data-zh="左右滑動查看更多案例">左右滑動查看更多案例</span></span><div class="arrows"><button data-carousel-prev="">←</button><button data-carousel-next="">→</button></div></div></div></div></section>
+<section class="section soft"><div class="wrap"><div class="section-head"><div><div class="eyebrow">APPLICATIONS</div><h2><span data-en="Typical Applications" data-zh="典型應用">典型應用</span></h2></div></div><div class="application-grid"><article class="application-card"><h3><span data-en="Robotic Welding" data-zh="機器人焊接">機器人焊接</span></h3><p><span data-en="Implementation is evaluated around the part, cycle time and site conditions." data-zh="依客戶工件、節拍與現場條件評估導入方式。">依客戶工件、節拍與現場條件評估導入方式。</span></p></article><article class="application-card"><h3><span data-en="Positioner Coordination" data-zh="變位協同">變位協同</span></h3><p><span data-en="Implementation is evaluated around the part, cycle time and site conditions." data-zh="依客戶工件、節拍與現場條件評估導入方式。">依客戶工件、節拍與現場條件評估導入方式。</span></p></article><article class="application-card"><h3><span data-en="Laser Processing" data-zh="雷射加工">雷射加工</span></h3><p><span data-en="Implementation is evaluated around the part, cycle time and site conditions." data-zh="依客戶工件、節拍與現場條件評估導入方式。">依客戶工件、節拍與現場條件評估導入方式。</span></p></article></div></div></section>
+<section class="section"><div class="wrap"><div class="section-head"><div><div class="eyebrow">DELIVERY PATH</div><h2><span data-en="Implementation Path" data-zh="導入路徑">導入路徑</span></h2></div></div><div class="process"><article class="process-step"><strong>01</strong><h3><span data-en="Requirement" data-zh="需求確認">需求確認</span></h3><p><span data-en="Part, cycle time, quality and site conditions." data-zh="工件、節拍、品質與現場條件。">工件、節拍、品質與現場條件。</span></p></article><article class="process-step"><strong>02</strong><h3><span data-en="Concept" data-zh="方案評估">方案評估</span></h3><p><span data-en="Match equipment, robots, tooling and process." data-zh="設備、機器人、工裝與流程匹配。">設備、機器人、工裝與流程匹配。</span></p></article><article class="process-step"><strong>03</strong><h3><span data-en="Integration" data-zh="工程整合">工程整合</span></h3><p><span data-en="Mechanical, controls, software and safety integration." data-zh="機械、電控、程式與安全整合。">機械、電控、程式與安全整合。</span></p></article><article class="process-step"><strong>04</strong><h3><span data-en="Delivery" data-zh="交付支持">交付支持</span></h3><p><span data-en="Installation, commissioning, acceptance and support." data-zh="安裝、調試、驗收與後續服務。">安裝、調試、驗收與後續服務。</span></p></article></div></div></section>
+<section class="section soft"><div class="wrap"><div class="cta"><div><h2><span data-en="Have a similar application?" data-zh="有類似應用？">有類似應用？</span></h2><p><span data-en="Share the part, cycle time and site information for an initial review." data-zh="提供工件、節拍與現場資訊，我們可先做初步判讀。">提供工件、節拍與現場資訊，我們可先做初步判讀。</span></p></div><a class="btn red" href="mailto:boss@atn-robot.com?subject=ATNR%20Solution%20Inquiry"><span data-en="Email ATNR" data-zh="Email 洽談">Email 洽談</span></a></div></div></section></main></div>
+<div id="page-solution-smart-factory" class="review-page"><main><section class="page-hero"><div class="wrap page-hero-grid"><div><div class="eyebrow">SOLUTION · SMARTFACTORY</div><h1><span data-en="Smart Factory Integration" data-zh="智慧工廠">智慧工廠</span></h1><p><span data-en="Start from automation cells, smart logistics and equipment connectivity, then scale toward line- and factory-level integration step by step." data-zh="從自動化單元、智慧物流與設備聯網開始，依需求分階段推進整線與工廠級整合。">從自動化單元、智慧物流與設備聯網開始，依需求分階段推進整線與工廠級整合。</span></p></div><div class="page-hero-image"><img loading="eager" src="assets/preview-09.webp"/></div></div></section>
+<section class="video-section"><div class="wrap"><div class="section-head"><div><div class="eyebrow">PROJECT VIDEOS</div><h2><span data-en="Video Cases" data-zh="案例影片">案例影片</span></h2></div><p><span data-en="Free-First mode loads YouTube only after a click. Covers and case positions remain functional even before final video links are added." data-zh="影片採點擊後才載入 YouTube 的 Free-First 模式；正式影片尚未接入時，封面與案例位置仍能正常顯示。">影片採點擊後才載入 YouTube 的 Free-First 模式；正式影片尚未接入時，封面與案例位置仍能正常顯示。</span></p></div><div data-carousel-shell=""><div class="video-carousel" data-carousel=""><article class="video-card" data-video-index="0"><div class="video-cover"><img loading="lazy" src="assets/preview-09.webp"/><span class="play-disc"></span><span class="video-time">15–30 sec</span></div><div class="video-copy"><small>VIDEO CASE 01</small><h3><span data-en="Video Case 01" data-zh="案例影片 01">案例影片 01</span></h3></div></article><article class="video-card" data-video-index="1"><div class="video-cover"><img loading="lazy" src="assets/preview-21.webp"/><span class="play-disc"></span><span class="video-time">15–30 sec</span></div><div class="video-copy"><small>VIDEO CASE 02</small><h3><span data-en="Video Case 02" data-zh="案例影片 02">案例影片 02</span></h3></div></article><article class="video-card" data-video-index="2"><div class="video-cover"><img loading="lazy" src="assets/preview-22.webp"/><span class="play-disc"></span><span class="video-time">15–30 sec</span></div><div class="video-copy"><small>VIDEO CASE 03</small><h3><span data-en="Video Case 03" data-zh="案例影片 03">案例影片 03</span></h3></div></article></div><div class="carousel-controls"><span><span data-en="Swipe for more cases" data-zh="左右滑動查看更多案例">左右滑動查看更多案例</span></span><div class="arrows"><button data-carousel-prev="">←</button><button data-carousel-next="">→</button></div></div></div></div></section>
+<section class="section soft"><div class="wrap"><div class="section-head"><div><div class="eyebrow">APPLICATIONS</div><h2><span data-en="Typical Applications" data-zh="典型應用">典型應用</span></h2></div></div><div class="application-grid"><article class="application-card"><h3><span data-en="Automation Cells" data-zh="自動化單元">自動化單元</span></h3><p><span data-en="Implementation is evaluated around the part, cycle time and site conditions." data-zh="依客戶工件、節拍與現場條件評估導入方式。">依客戶工件、節拍與現場條件評估導入方式。</span></p></article><article class="application-card"><h3><span data-en="Smart Logistics" data-zh="智慧物流">智慧物流</span></h3><p><span data-en="Implementation is evaluated around the part, cycle time and site conditions." data-zh="依客戶工件、節拍與現場條件評估導入方式。">依客戶工件、節拍與現場條件評估導入方式。</span></p></article><article class="application-card"><h3><span data-en="Equipment Connectivity" data-zh="設備聯網">設備聯網</span></h3><p><span data-en="Implementation is evaluated around the part, cycle time and site conditions." data-zh="依客戶工件、節拍與現場條件評估導入方式。">依客戶工件、節拍與現場條件評估導入方式。</span></p></article></div></div></section>
+<section class="section"><div class="wrap"><div class="section-head"><div><div class="eyebrow">DELIVERY PATH</div><h2><span data-en="Implementation Path" data-zh="導入路徑">導入路徑</span></h2></div></div><div class="process"><article class="process-step"><strong>01</strong><h3><span data-en="Requirement" data-zh="需求確認">需求確認</span></h3><p><span data-en="Part, cycle time, quality and site conditions." data-zh="工件、節拍、品質與現場條件。">工件、節拍、品質與現場條件。</span></p></article><article class="process-step"><strong>02</strong><h3><span data-en="Concept" data-zh="方案評估">方案評估</span></h3><p><span data-en="Match equipment, robots, tooling and process." data-zh="設備、機器人、工裝與流程匹配。">設備、機器人、工裝與流程匹配。</span></p></article><article class="process-step"><strong>03</strong><h3><span data-en="Integration" data-zh="工程整合">工程整合</span></h3><p><span data-en="Mechanical, controls, software and safety integration." data-zh="機械、電控、程式與安全整合。">機械、電控、程式與安全整合。</span></p></article><article class="process-step"><strong>04</strong><h3><span data-en="Delivery" data-zh="交付支持">交付支持</span></h3><p><span data-en="Installation, commissioning, acceptance and support." data-zh="安裝、調試、驗收與後續服務。">安裝、調試、驗收與後續服務。</span></p></article></div></div></section>
+<section class="section soft"><div class="wrap"><div class="cta"><div><h2><span data-en="Have a similar application?" data-zh="有類似應用？">有類似應用？</span></h2><p><span data-en="Share the part, cycle time and site information for an initial review." data-zh="提供工件、節拍與現場資訊，我們可先做初步判讀。">提供工件、節拍與現場資訊，我們可先做初步判讀。</span></p></div><a class="btn red" href="mailto:boss@atn-robot.com?subject=ATNR%20Solution%20Inquiry"><span data-en="Email ATNR" data-zh="Email 洽談">Email 洽談</span></a></div></div></section></main></div>
+<div id="page-maintenance" class="review-page"><main><section class="page-hero"><div class="wrap page-hero-grid"><div><div class="eyebrow">LIFECYCLE SERVICE</div><h1><span data-en="Multi-brand Robot Lifecycle Service" data-zh="多品牌工業機器人維保服務">多品牌工業機器人維保服務</span></h1><p><span data-en="Thailand-based lifecycle service covering fault diagnosis, emergency repair, preventive maintenance and remote support, designed to accumulate reusable service knowledge." data-zh="以泰國在地服務為基礎，從故障診斷、緊急維修到預防保養與遠程支持，逐步建立可持續、可沉澱的維保服務模式。">以泰國在地服務為基礎，從故障診斷、緊急維修到預防保養與遠程支持，逐步建立可持續、可沉澱的維保服務模式。</span></p></div><div class="page-hero-image"><img loading="eager" src="assets/preview-02.webp"/></div></div></section>
+<section class="section"><div class="wrap"><div class="section-head"><div><div class="eyebrow">SERVICE ENTRY</div><h2><span data-en="Six Service Entries" data-zh="六個服務入口">六個服務入口</span></h2></div><p><span data-en="The current priority is executable, billable service that accumulates useful customer information—not a heavy after-sales platform." data-zh="現階段先以可執行、可收費、可累積客戶資訊的維保服務為主，不先做重型售後系統。">現階段先以可執行、可收費、可累積客戶資訊的維保服務為主，不先做重型售後系統。</span></p></div><div class="maintenance-services">
+<article class="maintenance-service" id="multi-brand-maintenance"><span class="maintenance-icon"><svg aria-hidden="true" viewbox="0 0 48 48"><path d="M8 34h12l5-8 7 3 7-9"></path><circle cx="8" cy="34" r="3"></circle><circle cx="20" cy="34" r="3"></circle><circle cx="25" cy="26" r="3"></circle><circle cx="32" cy="29" r="3"></circle><circle cx="39" cy="20" r="3"></circle><path d="M28 12h10v8"></path></svg></span><span class="num">01</span><h3><span data-en="Multi-brand Robot Maintenance" data-zh="多品牌機器人維保">多品牌機器人維保</span></h3><p><span data-en="Inspection, maintenance and condition checks for existing industrial robots." data-zh="面向既有工業機器人設備的檢修、保養與狀態確認。">面向既有工業機器人設備的檢修、保養與狀態確認。</span></p></article>
+<article class="maintenance-service" id="fault-diagnosis"><span class="maintenance-icon"><svg aria-hidden="true" viewbox="0 0 48 48"><rect height="20" rx="3" width="27" x="7" y="8"></rect><path d="M11 20h6l3-7 5 14 3-7h6"></path><path d="M16 34h10"></path><path d="M21 28v6"></path><circle cx="35" cy="32" r="7"></circle><path d="m40 37 4 4"></path></svg></span><span class="num">02</span><h3><span data-en="Fault Diagnosis" data-zh="故障診斷">故障診斷</span></h3><p><span data-en="Initial diagnosis based on symptoms, alarms, photos and videos." data-zh="根據異常現象、Alarm、照片與影片做初步判讀。">根據異常現象、Alarm、照片與影片做初步判讀。</span></p></article>
+<article class="maintenance-service" id="emergency-repair"><span class="maintenance-icon"><svg aria-hidden="true" viewbox="0 0 48 48"><path d="M30 7a10 10 0 0 0-9 14L8 34a4 4 0 1 0 6 6l13-13a10 10 0 0 0 14-9l-7 5-7-7z"></path><path d="m33 30 9 9"></path></svg></span><span class="num">03</span><h3><span data-en="Emergency Repair" data-zh="緊急維修">緊急維修</span></h3><p><span data-en="Remote or on-site engineering support based on urgency." data-zh="依問題緊急程度安排遠程或現場工程支援。">依問題緊急程度安排遠程或現場工程支援。</span></p></article>
+<article class="maintenance-service" id="preventive-maintenance"><span class="maintenance-icon"><svg aria-hidden="true" viewbox="0 0 48 48"><rect height="29" rx="4" width="30" x="7" y="10"></rect><path d="M14 6v8M30 6v8M7 18h30"></path><path d="m16 28 5 5 10-11"></path></svg></span><span class="num">04</span><h3><span data-en="Preventive Maintenance" data-zh="預防保養與點檢">預防保養與點檢</span></h3><p><span data-en="Periodic inspection, maintenance and risk-prevention routines." data-zh="建立定期點檢、保養與風險預防機制。">建立定期點檢、保養與風險預防機制。</span></p></article>
+<article class="maintenance-service" id="parts-improvement"><span class="maintenance-icon"><svg aria-hidden="true" viewbox="0 0 48 48"><path d="m8 16 16-8 16 8-16 8z"></path><path d="M8 16v17l16 8 16-8V16M24 24v17"></path><path d="M30 12 14 20"></path></svg></span><span class="num">05</span><h3><span data-en="Parts &amp; Improvement" data-zh="備件與設備改善">備件與設備改善</span></h3><p><span data-en="Evaluate parts, replacement and improvement around actual equipment condition." data-zh="依實際故障與設備狀態評估備件、更換與改善。">依實際故障與設備狀態評估備件、更換與改善。</span></p></article>
+<article class="maintenance-service" id="remote-support"><span class="maintenance-icon"><svg aria-hidden="true" viewbox="0 0 48 48"><path d="M9 30v-5a15 15 0 0 1 30 0v5"></path><rect height="12" rx="3" width="8" x="6" y="28"></rect><rect height="12" rx="3" width="8" x="34" y="28"></rect><path d="M34 40c-2 3-5 4-10 4"></path><circle cx="22" cy="44" r="2"></circle><path d="M19 23a8 8 0 0 1 10 0M22 19a12 12 0 0 1 4 0"></path></svg></span><span class="num">06</span><h3><span data-en="Remote Technical Support" data-zh="遠程技術支持">遠程技術支持</span></h3><p><span data-en="Start with an actionable remote-support flow using email, photos, video and engineer review." data-zh="先從 Email、照片、影片與工程師判讀建立可執行的遠程支持流程。">先從 Email、照片、影片與工程師判讀建立可執行的遠程支持流程。</span></p></article>
+</div></div></section>
+<section class="section soft"><div class="wrap">
+<div class="section-head">
+<div><div class="eyebrow">SERVICE FLOW</div><h2><span data-en="Maintenance Service Flow" data-zh="維保服務流程">維保服務流程</span></h2></div>
+<p><span data-en="A simple three-step customer flow: provide information, engineer review, then remote or on-site support." data-zh="對客戶只保留最需要理解的三步：提供資訊、工程判讀、遠程或現場處理。">對客戶只保留最需要理解的三步：提供資訊、工程判讀、遠程或現場處理。</span></p>
+</div>
+<div class="process" style="grid-template-columns:repeat(3,1fr)">
+<article class="process-step"><strong>01</strong>
+<h3><span data-en="Submit Equipment Info" data-zh="提交設備資訊">提交設備資訊</span></h3>
+<p><span data-en="Brand, model, alarm code, symptoms, photos or video." data-zh="品牌、型號、Alarm Code、異常現象、照片或影片。">品牌、型號、Alarm Code、異常現象、照片或影片。</span></p>
+</article>
+<article class="process-step"><strong>02</strong>
+<h3><span data-en="Engineer Review" data-zh="工程師初判">工程師初判</span></h3>
+<p><span data-en="Identify the issue type, risk and any additional information needed." data-zh="先確認問題類型、風險與是否需要補充資料。">先確認問題類型、風險與是否需要補充資料。</span></p>
+</article>
+<article class="process-step"><strong>03</strong>
+<h3><span data-en="Remote / On-site Support" data-zh="遠程／現場處理">遠程／現場處理</span></h3>
+<p><span data-en="Proceed with remote troubleshooting, parts advice or on-site service as needed." data-zh="依實際狀況進行遠程排查、備件建議或安排現場服務。">依實際狀況進行遠程排查、備件建議或安排現場服務。</span></p>
+</article>
+</div>
+</div></section>
+<section class="section dark"><div class="wrap"><div class="roadmap"><div class="eyebrow">SERVICE ROADMAP</div><h2><span data-en="AI-assisted Troubleshooting &amp; Cross-border Remote Support" data-zh="AI 輔助排查與跨國遠程支持">AI 輔助排查與跨國遠程支持</span></h2><p style="color:#C3CED6;line-height:1.7"><span data-en="This is a development roadmap, not a finished product. Real service cases come first, followed by a knowledge base and AI-assisted troubleshooting." data-zh="這是發展方向，不是現階段已完成的產品。先累積真實維保 Case，再建立知識庫與 AI 輔助排查能力。">這是發展方向，不是現階段已完成的產品。先累積真實維保 Case，再建立知識庫與 AI 輔助排查能力。</span></p><div class="roadmap-grid"><div class="roadmap-card"><b><span data-en="Stage 1｜Real Cases" data-zh="Stage 1｜真實 Case">Stage 1｜真實 Case</span></b><span><span data-en="Faults, models, alarms, symptoms and resolutions." data-zh="故障、型號、Alarm、現象、處置結果。">故障、型號、Alarm、現象、處置結果。</span></span></div><div class="roadmap-card"><b><span data-en="Stage 2｜Knowledge Base" data-zh="Stage 2｜知識沉澱">Stage 2｜知識沉澱</span></b><span><span data-en="Structure the data into FAQs, case records and engineering knowledge." data-zh="整理為 FAQ、故障案例與工程知識。">整理為 FAQ、故障案例與工程知識。</span></span></div><div class="roadmap-card"><b><span data-en="Stage 3｜AI Assist" data-zh="Stage 3｜AI 輔助">Stage 3｜AI 輔助</span></b><span><span data-en="Then introduce AI-assisted search and remote support." data-zh="再導入 AI 問題檢索與遠程協助。">再導入 AI 問題檢索與遠程協助。</span></span></div></div></div></div></section>
+<section class="section"><div class="wrap"><div class="cta"><div><h2><span data-en="Equipment issue? Send us the basic information first." data-zh="設備出現問題？先把資訊發給我們。">設備出現問題？先把資訊發給我們。</span></h2><p><span data-en="Recommended: brand, model, alarm code, symptoms, photos/video and location." data-zh="建議包含：品牌、型號、Alarm Code、異常現象、照片／影片與所在地。">建議包含：品牌、型號、Alarm Code、異常現象、照片／影片與所在地。</span></p></div><a class="btn red" href="mailto:boss@atn-robot.com?subject=ATNR%20Service%20Request"><span data-en="Submit Service Request" data-zh="提交維保需求">提交維保需求</span></a></div></div></section></main></div>
+<footer class="footer"><div class="wrap footer-row"><div>© ATNR Thailand</div><div><span data-en="Free-First｜Mobile-first｜Reusable template" data-zh="Free-First｜Mobile-first｜可複製模板">Free-First｜Mobile-first｜可複製模板</span></div></div></footer>
+<nav class="mobile-bottom"><a href="#home" data-route="home"><b>⌂</b><span data-en="Home" data-zh="首頁">首頁</span></a><a href="#solutions" data-route="home" data-target="solutions"><b>▦</b><span data-en="Solutions" data-zh="方案">方案</span></a><a href="#maintenance" data-route="maintenance"><b>⚙</b><span data-en="Service" data-zh="維保">維保</span></a><a href="#contact" data-route="home" data-target="contact"><b>✉</b><span data-en="Contact" data-zh="聯絡">聯絡</span></a></nav>
+<div class="video-modal" id="videoModal" aria-hidden="true">
+  <div class="video-dialog">
+    <div class="video-dialog-head"><strong id="videoTitle">Video</strong><button class="video-close" data-video-close>×</button></div>
+    <div class="video-stage" id="videoStage"></div>
+  </div>
+</div>
+<script>
+window.ATNR_DATA = {
+  company: {
+    name: "ATNR Thailand",
+    email: "boss@atn-robot.com",
+    phone: "+66 9453 86529",
+    address: "25/5 Mu 1 T.Nong Samsak A.Banbueng, Chonburi 20170, THAILAND"
+  },
+  solutions: {
+    machining: {
+      page: "solution-machining.html",
+      number: "01",
+      zh: "柔性機加工智能產線",
+      en: "Flexible Machining Automation",
+      shortZh: "CNC 上下料、柔性連線與多工序協同",
+      shortEn: "CNC tending, flexible linkage and multi-process coordination",
+      cover: "assets/preview-06.webp",
+      tagsZh: ["CNC 上下料", "柔性連線", "多工序協同"],
+      tagsEn: ["CNC Tending", "Flexible Linkage", "Multi-process"],
+      videos: [
+        {cover:"assets/preview-06.webp", zh:"柔性機加工單元", en:"Flexible Machining Cell", url:""},
+        {cover:"assets/preview-15.webp", zh:"多機協同上下料", en:"Multi-machine Tending", url:""},
+        {cover:"assets/preview-16.webp", zh:"柔性產線整合", en:"Flexible Line Integration", url:""}
+      ]
+    },
+    finishing: {
+      page: "solution-finishing.html",
+      number: "02",
+      zh: "金屬零組件表面處理",
+      en: "Metal Component Surface Finishing",
+      shortZh: "去毛刺、打磨、拋光與表面處理自動化",
+      shortEn: "Deburring, grinding, polishing and finishing automation",
+      cover: "assets/preview-07.webp",
+      tagsZh: ["去毛刺", "打磨拋光", "製程自動化"],
+      tagsEn: ["Deburring", "Grinding & Polishing", "Process Automation"],
+      videos: [
+        {cover:"assets/preview-17.webp", zh:"機器人表面處理", en:"Robotic Surface Finishing", url:""},
+        {cover:"assets/preview-18.webp", zh:"去毛刺工作站", en:"Deburring Cell", url:""},
+        {cover:"assets/preview-07.webp", zh:"打磨與拋光應用", en:"Grinding & Polishing", url:""}
+      ]
+    },
+    welding: {
+      page: "solution-welding.html",
+      number: "03",
+      zh: "工業焊接與雷射加工自動化",
+      en: "Industrial Welding & Laser Automation",
+      shortZh: "機器人焊接、變位協同與雷射加工",
+      shortEn: "Robotic welding, positioner coordination and laser processing",
+      cover: "assets/preview-08.webp",
+      tagsZh: ["機器人焊接", "變位協同", "雷射加工"],
+      tagsEn: ["Robotic Welding", "Positioning", "Laser Processing"],
+      videos: [
+        {cover:"assets/preview-19.webp", zh:"焊接工作站", en:"Welding Cell", url:""},
+        {cover:"assets/preview-08.webp", zh:"變位協同焊接", en:"Positioner Welding", url:""},
+        {cover:"assets/preview-20.webp", zh:"整線焊接自動化", en:"Welding Line Automation", url:""}
+      ]
+    },
+    smartfactory: {
+      page: "solution-smart-factory.html",
+      number: "04",
+      zh: "智慧工廠",
+      en: "Smart Factory Integration",
+      shortZh: "自動化單元、智慧物流、設備聯網與整線整合",
+      shortEn: "Automation cells, smart logistics, connectivity and line integration",
+      cover: "assets/preview-09.webp",
+      tagsZh: ["自動化單元", "智慧物流", "設備聯網"],
+      tagsEn: ["Automation Cells", "Smart Logistics", "Connectivity"],
+      videos: [
+        {cover:"assets/preview-09.webp", zh:"智慧製造產線", en:"Smart Manufacturing Line", url:""},
+        {cover:"assets/preview-21.webp", zh:"設備與物流整合", en:"Equipment & Logistics Integration", url:""},
+        {cover:"assets/preview-22.webp", zh:"整廠自動化佈局", en:"Factory Automation Layout", url:""}
+      ]
+    }
+  }
+};
+</script>
+<script>
+(() => {
+  const getLang = () => localStorage.getItem("atnr-lang") || "zh";
+  const setLang = (lang) => {
+    localStorage.setItem("atnr-lang", lang);
+    document.documentElement.lang = lang === "zh" ? "zh-Hant" : "en";
+    document.querySelectorAll("[data-zh][data-en]").forEach(el => {
+      el.textContent = el.dataset[lang];
+    });
+    document.querySelectorAll("[data-lang-toggle]").forEach(btn => {
+      btn.textContent = lang === "zh" ? "EN" : "中";
+    });
+    window.dispatchEvent(new CustomEvent("atnr-language-changed", {detail:{lang}}));
+  };
+
+  document.addEventListener("click", e => {
+    const btn = e.target.closest("[data-lang-toggle]");
+    if (btn) setLang(getLang() === "zh" ? "en" : "zh");
+  });
+
+  document.addEventListener("click", e => {
+    const trigger = e.target.closest("[data-menu-toggle]");
+    if (trigger) document.body.classList.toggle("menu-open");
+    const link = e.target.closest(".mobile-drawer a");
+    if (link) document.body.classList.remove("menu-open");
+  });
+
+  const youtubeEmbed = (url) => {
+    if (!url) return "";
+    try {
+      const u = new URL(url, window.location.href);
+      let id = "";
+      if (u.hostname.includes("youtu.be")) id = u.pathname.replace("/", "");
+      else if (u.pathname.includes("/shorts/")) id = u.pathname.split("/shorts/")[1].split("/")[0];
+      else if (u.pathname.includes("/embed/")) id = u.pathname.split("/embed/")[1].split("/")[0];
+      else id = u.searchParams.get("v") || "";
+      return id ? `https://www.youtube.com/embed/${id}?rel=0&playsinline=1` : url;
+    } catch (_) { return url; }
+  };
+
+  window.ATNRVideo = {
+    open(item) {
+      const modal = document.getElementById("videoModal");
+      const stage = document.getElementById("videoStage");
+      const title = document.getElementById("videoTitle");
+      if (!modal || !stage) return;
+      const lang = getLang();
+      title.textContent = lang === "zh" ? item.zh : item.en;
+      const url = (item.url || "").trim();
+      if (!url) {
+        stage.innerHTML = `
+          <img src="${item.cover}" alt="">
+          <div class="video-fallback">
+            <span class="play-disc"></span>
+            <strong>${lang === "zh" ? "案例影片待接入" : "Video link pending"}</strong>
+            <p>${lang === "zh" ? "目前先保留封面與案例位置；貼入 YouTube 連結後即可播放。" : "The cover and case slot are ready. Add a YouTube URL to enable playback."}</p>
+          </div>`;
+      } else if (url.includes("youtube.com") || url.includes("youtu.be")) {
+        stage.innerHTML = `<iframe src="${youtubeEmbed(url)}" title="${title.textContent}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+      } else {
+        stage.innerHTML = `<video src="${url}" controls playsinline preload="metadata" poster="${item.cover}"></video>`;
+      }
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden","false");
+      document.body.style.overflow = "hidden";
+    },
+    close() {
+      const modal = document.getElementById("videoModal");
+      const stage = document.getElementById("videoStage");
+      if (!modal || !stage) return;
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden","true");
+      stage.innerHTML = "";
+      document.body.style.overflow = "";
+    }
+  };
+
+  document.addEventListener("click", e => {
+    if (e.target.matches("#videoModal")) window.ATNRVideo.close();
+    if (e.target.closest("[data-video-close]")) window.ATNRVideo.close();
+  });
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") window.ATNRVideo.close();
+  });
+
+  document.querySelectorAll("[data-carousel]").forEach(car => {
+    const shell = car.closest("[data-carousel-shell]");
+    const prev = shell?.querySelector("[data-carousel-prev]");
+    const next = shell?.querySelector("[data-carousel-next]");
+    const move = dir => {
+      const card = car.querySelector(":scope > *");
+      const amount = Math.max(280, (card?.getBoundingClientRect().width || 300) + 14);
+      car.scrollBy({left: dir * amount, behavior: "smooth"});
+    };
+    prev?.addEventListener("click", () => move(-1));
+    next?.addEventListener("click", () => move(1));
+  });
+
+  setLang(getLang());
+})();
+</script>
+<script>
+(() => {
+  const routeMap={
+    home:"page-home",maintenance:"page-maintenance",
+    "solution-machining":"page-solution-machining",
+    "solution-finishing":"page-solution-finishing",
+    "solution-welding":"page-solution-welding",
+    "solution-smart-factory":"page-solution-smart-factory"
+  };
+
+  function activate(route,target){
+    document.querySelectorAll(".review-page").forEach(p=>p.classList.remove("active"));
+    const page=document.getElementById(routeMap[route]||"page-home");
+    page.classList.add("active");
+    requestAnimationFrame(()=>{
+      if(target){
+        const el=page.querySelector("#"+CSS.escape(target));
+        if(el) el.scrollIntoView({behavior:"auto",block:"start"});
+        else window.scrollTo(0,0);
+      }else{
+        window.scrollTo(0,0);
+      }
+    });
+  }
+
+  document.addEventListener("click",e=>{
+    const a=e.target.closest("a[data-route]");
+    if(!a)return;
+    e.preventDefault();
+    const route=a.dataset.route||"home";
+    const target=a.dataset.target||"";
+    history.replaceState(null,"","#"+route+(target?"__"+target:""));
+    activate(route,target);
+    document.body.classList.remove("menu-open");
+  });
+
+  function fromHash(){
+    const raw=location.hash.replace(/^#/,"");
+    if(!raw){activate("home","");return;}
+    const parts=raw.split("__");
+    activate(routeMap[parts[0]]?parts[0]:"home",parts[1]||"");
+  }
+  addEventListener("DOMContentLoaded",fromHash);
+  addEventListener("hashchange",fromHash);
+
+  document.addEventListener("click",e=>{
+    const c=e.target.closest("[data-video-index]");
+    if(!c)return;
+    const main=c.closest("main[data-solution-page]");
+    if(!main)return;
+    const item=window.ATNR_DATA?.solutions?.[main.dataset.solutionPage]?.videos?.[Number(c.dataset.videoIndex)];
+    if(item)window.ATNRVideo.open(item);
+  });
+})();
+</script>
+</body>
+</html>
